@@ -5,6 +5,7 @@ $db = require __DIR__ . '/db.php';
 
 $config = [
     'id' => 'firestarter-app',
+    'name' => 'to-do-list',
     'language' => 'en-US',
     'basePath' => dirname(__DIR__),
     'bootstrap' => [
@@ -17,6 +18,7 @@ $config = [
     'modules' => [
         'user' => [
             'class' => 'dektrium\user\Module',
+            'admins' => ['admin'],
             'modelMap' => [
                 'User' => 'app\models\User',
                 'RegistrationForm' => 'app\models\user\RegistrationForm',
@@ -30,7 +32,7 @@ $config = [
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => '',
+            'cookieValidationKey' => 'QoS41RnFh0esipGU2kNpXlvBbcwOW1VM',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
